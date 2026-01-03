@@ -2,60 +2,46 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/ffb83dbd-abd5-4837-b067-4c047acb2a28
+# Portfolio Website
 
-## How can I edit this code?
+A personal portfolio website built using **React**, **Vite**, **TypeScript**, **Tailwind CSS**, and **shadcn-ui** — designed to showcase projects, skills, and experience in a clean, responsive UI.:contentReference[oaicite:1]{index=1}
 
-There are several ways of editing your application.
+## 🚀 Demo
 
-**Use Lovable**
+👉 Live demo: *(Add your deployed website link here — e.g., GitHub Pages / Vercel / Netlify / custom domain)*
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ffb83dbd-abd5-4837-b067-4c047acb2a28) and start prompting.
+## 📌 Project Overview
 
-Changes made via Lovable will be committed automatically to this repo.
+This project is a modern developer portfolio template that includes:
 
-**Use your preferred IDE**
+- Fully responsive design for mobile & desktop
+- Sections for About Me, Projects, Skills, Contact, etc.
+- Built with React and styled using Tailwind CSS
+- Fast development & optimized build with Vite
+- Component UI via shadcn-ui ecosystem  
+*(List features that match your actual project)*:contentReference[oaicite:2]{index=2}
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🧱 Technologies Used
 
-Follow these steps:
+| Technology | Purpose |
+|------------|---------|
+| **React** | UI building and component management |
+| **Vite** | Fast development tooling & bundling |
+| **TypeScript** | Static typing for safer code |
+| **Tailwind CSS** | Utility-first styling |
+| **shadcn-ui** | Component library for UI elements |
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+*(Add or remove based on what your project uses)*:contentReference[oaicite:3]{index=3}
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🛠 Installation & Setup
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### Clone the repository
 
-**Edit a file directly in GitHub**
+```bash
+git clone https://github.com/nightwingfk1/portfolio-website.git
+cd portfolio-website
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
