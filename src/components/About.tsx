@@ -1,4 +1,5 @@
 import { Code, GraduationCap, Briefcase } from "lucide-react";
+import headshot from "@/assets/headshot.jpeg";
 
 const About = () => {
   const highlights = [
@@ -26,6 +27,22 @@ const About = () => {
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-3xl md:text-5xl font-bold mb-4">About Me</h2>
             <div className="w-20 h-1 bg-gradient-accent mx-auto rounded-full" />
+          </div>
+
+          {/* Profile Photo */}
+          <div className="flex justify-center mb-12 animate-fade-in-up">
+            <div className="relative">
+              <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-primary/20 shadow-glow">
+                <img 
+                  src={headshot} 
+                  alt="Fouzan Mohammed Khan" 
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-soft">
+                <Code className="h-6 w-6 text-primary-foreground" />
+              </div>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
