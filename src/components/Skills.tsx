@@ -6,32 +6,41 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      category: "Frontend",
+      category: "Programming Languages",
       skills: [
-        { name: "React", level: 90 },
-        { name: "TypeScript", level: 85 },
-        { name: "Tailwind CSS", level: 90 },
-        { name: "Next.js", level: 80 }
+        { name: "Python", level: 85 },
+        { name: "Java", level: 80 },
+        { name: "C/C++", level: 75 },
+        { name: "JavaScript", level: 80 }
       ]
     },
     {
-      category: "Backend",
+      category: "Web Development",
       skills: [
-        { name: "Node.js", level: 85 },
-        { name: "Python", level: 75 },
-        { name: "PostgreSQL", level: 80 },
-        { name: "MongoDB", level: 70 }
+        { name: "React.js", level: 80 },
+        { name: "Node.js", level: 75 },
+        { name: "HTML/CSS", level: 85 },
+        { name: "Django", level: 70 }
       ]
     },
     {
-      category: "Tools & Others",
+      category: "Cloud & AI",
       skills: [
-        { name: "Git", level: 90 },
-        { name: "Docker", level: 75 },
         { name: "AWS", level: 70 },
-        { name: "Figma", level: 85 }
+        { name: "DevOps", level: 65 },
+        { name: "Machine Learning", level: 75 },
+        { name: "Computer Vision", level: 70 }
       ]
     }
+  ];
+
+  const certifications = [
+    "AWS and DevOps Training",
+    "Introduction to AI - Great Learning",
+    "Java Programming - Great Learning",
+    "Google Cloud GenAI",
+    "AI Design Challenges - VOIS",
+    "Generative AI - NXT WAVE"
   ];
 
   return (
@@ -42,11 +51,11 @@ const Skills = () => {
             <h2 className="text-3xl md:text-5xl font-bold mb-4">Skills & Expertise</h2>
             <div className="w-20 h-1 bg-gradient-accent mx-auto rounded-full" />
             <p className="text-muted-foreground mt-6 text-lg max-w-2xl mx-auto">
-              A comprehensive toolkit built through years of hands-on experience
+              Technical skills and certifications built through hands-on experience
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             {skillCategories.map((category, categoryIndex) => (
               <div 
                 key={categoryIndex}
@@ -93,6 +102,22 @@ const Skills = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Certifications */}
+          <div className="animate-fade-in-up">
+            <h3 className="text-2xl font-semibold text-center mb-6">Certifications</h3>
+            <div className="flex flex-wrap justify-center gap-3">
+              {certifications.map((cert, index) => (
+                <Badge 
+                  key={index}
+                  variant="outline"
+                  className="px-4 py-2 text-sm hover:bg-primary hover:text-primary-foreground transition-smooth"
+                >
+                  {cert}
+                </Badge>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -1,21 +1,21 @@
-import { Code, Palette, Zap } from "lucide-react";
+import { Code, GraduationCap, Briefcase } from "lucide-react";
 
 const About = () => {
   const highlights = [
     {
+      icon: GraduationCap,
+      title: "Education",
+      description: "BE in Computer Science Engineering at Lords College of Engineering and Technology (GPA: 9)"
+    },
+    {
+      icon: Briefcase,
+      title: "Experience",
+      description: "Product Development Intern at Collab Hub - Built no-code MVP mobile applications"
+    },
+    {
       icon: Code,
-      title: "Clean Code",
-      description: "Writing maintainable, scalable code following best practices"
-    },
-    {
-      icon: Palette,
-      title: "Design Focus",
-      description: "Creating beautiful, user-centered interfaces"
-    },
-    {
-      icon: Zap,
-      title: "Performance",
-      description: "Optimizing for speed and efficiency"
+      title: "Innovation",
+      description: "1st Prize Winner at AI Expo for innovation in Artificial Intelligence"
     }
   ];
 
@@ -31,18 +31,19 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-slide-in">
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                I'm a passionate developer with a keen eye for design and a love for creating 
-                seamless digital experiences. With expertise in modern web technologies, I transform 
-                ideas into reality through clean, efficient code.
+                I'm Fouzan Mohammed Khan, a passionate Software Engineer currently pursuing my BE in 
+                Computer Science Engineering. I leverage my technical expertise and problem-solving 
+                skills to contribute to innovative projects and drive organizational success.
               </p>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                My journey in tech has equipped me with a diverse skill set spanning frontend 
-                development, backend architecture, and UI/UX design. I thrive on solving complex 
-                problems and continuously learning new technologies.
+                My journey includes hands-on experience as a Product Development Intern at Collab Hub, 
+                where I designed and developed no-code MVP mobile applications and contributed to UX 
+                optimization and automation setups.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                When I'm not coding, you'll find me exploring the latest tech trends, contributing 
-                to open-source projects, or sharing knowledge with the developer community.
+                I'm continuously learning through professional training in AWS and DevOps, and I've 
+                completed certifications in AI, Java Programming, and Google Cloud GenAI. I'm passionate 
+                about AI innovation and have won 1st prize at the AI Expo.
               </p>
             </div>
 
