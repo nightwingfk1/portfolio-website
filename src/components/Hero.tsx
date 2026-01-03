@@ -23,15 +23,15 @@ const Hero = () => {
       <div className="container relative z-10 px-4 py-20 md:py-32">
         <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
           <div className="inline-block mb-4 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
-            Welcome to my portfolio
+            Software Engineer
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-            Building Digital Experiences
+            Fouzan Mohammed Khan
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Full-stack developer passionate about creating elegant solutions to complex problems
+            Leveraging technical expertise and problem-solving skills to build innovative solutions
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center mb-12">
@@ -85,7 +85,7 @@ const Hero = () => {
               <Linkedin className="h-5 w-5" />
             </a>
             <a 
-              href="mailto:contact@example.com"
+              href="mailto:fouzankhan002@gmail.com"
               className="p-3 rounded-full border border-border hover:bg-muted transition-smooth hover:shadow-soft"
               aria-label="Email Contact"
             >
