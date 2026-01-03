@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, Download } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -50,6 +50,17 @@ const Hero = () => {
               className="border-primary/20 hover:bg-primary/5"
             >
               Get In Touch
+            </Button>
+            <Button 
+              size="lg" 
+              variant="secondary"
+              asChild
+              className="group"
+            >
+              <a href="/resume.pdf" download>
+                <Download className="mr-2 h-5 w-5 transition-transform group-hover:-translate-y-0.5" />
+                Download Resume
+              </a>
             </Button>
           </div>
 
