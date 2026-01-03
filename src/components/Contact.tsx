@@ -5,9 +5,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Contact = () => {
   const { toast } = useToast();
+  const { ref: sectionRef, isVisible } = useScrollAnimation<HTMLElement>();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -59,10 +61,10 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 md:py-32">
+    <section id="contact" ref={sectionRef} className="py-20 md:py-32">
       <div className="container px-4">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in-up">
+          <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-3xl md:text-5xl font-bold mb-4">Get In Touch</h2>
             <div className="w-20 h-1 bg-gradient-accent mx-auto rounded-full" />
             <p className="text-muted-foreground mt-6 text-lg max-w-2xl mx-auto">
@@ -76,8 +78,8 @@ const Contact = () => {
               {contactInfo.map((info, index) => (
                 <div 
                   key={index}
-                  className="flex gap-4 p-4 rounded-lg bg-card shadow-soft animate-slide-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className={`flex gap-4 p-4 rounded-lg bg-card shadow-soft transition-all duration-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}
+                  style={{ transitionDelay: `${200 + index * 100}ms` }}
                 >
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -107,7 +109,7 @@ const Contact = () => {
             <div className="md:col-span-3">
               <form 
                 onSubmit={handleSubmit}
-                className="bg-card p-8 rounded-xl shadow-soft animate-fade-in-up space-y-6"
+                className={`bg-card p-8 rounded-xl shadow-soft space-y-6 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
               >
                 <div>
                   <Label htmlFor="name">Name</Label>

@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Skills = () => {
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
+  const { ref: sectionRef, isVisible } = useScrollAnimation<HTMLElement>();
 
   const skillCategories = [
     {
@@ -44,10 +46,10 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 md:py-32">
+    <section id="skills" ref={sectionRef} className="py-20 md:py-32">
       <div className="container px-4">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in-up">
+          <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-3xl md:text-5xl font-bold mb-4">Skills & Expertise</h2>
             <div className="w-20 h-1 bg-gradient-accent mx-auto rounded-full" />
             <p className="text-muted-foreground mt-6 text-lg max-w-2xl mx-auto">
@@ -59,8 +61,8 @@ const Skills = () => {
             {skillCategories.map((category, categoryIndex) => (
               <div 
                 key={categoryIndex}
-                className="animate-fade-in-up"
-                style={{ animationDelay: `${categoryIndex * 0.1}s` }}
+                className={`transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                style={{ transitionDelay: `${200 + categoryIndex * 150}ms` }}
               >
                 <div className="bg-card rounded-xl p-6 shadow-soft hover:shadow-medium transition-smooth h-full">
                   <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
@@ -105,7 +107,7 @@ const Skills = () => {
           </div>
 
           {/* Certifications */}
-          <div className="animate-fade-in-up">
+          <div className={`transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h3 className="text-2xl font-semibold text-center mb-6">Certifications</h3>
             <div className="flex flex-wrap justify-center gap-3">
               {certifications.map((cert, index) => (

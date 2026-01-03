@@ -1,7 +1,10 @@
 import { Code, GraduationCap, Briefcase } from "lucide-react";
 import headshot from "@/assets/headshot.jpeg";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const About = () => {
+  const { ref: sectionRef, isVisible } = useScrollAnimation<HTMLElement>();
+
   const highlights = [
     {
       icon: GraduationCap,
@@ -21,16 +24,20 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 md:py-32 bg-muted/30">
+    <section 
+      id="about" 
+      ref={sectionRef}
+      className="py-20 md:py-32 bg-muted/30"
+    >
       <div className="container px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in-up">
+          <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-3xl md:text-5xl font-bold mb-4">About Me</h2>
             <div className="w-20 h-1 bg-gradient-accent mx-auto rounded-full" />
           </div>
 
           {/* Profile Photo */}
-          <div className="flex justify-center mb-12 animate-fade-in-up">
+          <div className={`flex justify-center mb-12 transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
             <div className="relative">
               <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-primary/20 shadow-glow">
                 <img 
@@ -46,7 +53,7 @@ const About = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="animate-slide-in">
+            <div className={`transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 I'm Fouzan Mohammed Khan, a passionate Software Engineer currently pursuing my BE in 
                 Computer Science Engineering. I leverage my technical expertise and problem-solving 
@@ -68,8 +75,8 @@ const About = () => {
               {highlights.map((item, index) => (
                 <div 
                   key={index}
-                  className="flex gap-4 p-6 rounded-lg bg-card shadow-soft hover:shadow-medium transition-smooth animate-fade-in-up"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className={`flex gap-4 p-6 rounded-lg bg-card shadow-soft hover:shadow-medium transition-all duration-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
+                  style={{ transitionDelay: `${300 + index * 100}ms` }}
                 >
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
